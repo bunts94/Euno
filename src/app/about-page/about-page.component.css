@@ -1,0 +1,14 @@
+#nameTitle {
+    text-align: center;
+    color: white;
+}
+
+#description {
+    text-align: center;
+    color: white;
+    font-size: x-large;
+}
+
+.aboutPage {
+    height: 100vh;
+}

@@ -1,0 +1,53 @@
+<section class="valign-wrapper">
+    <div class="container timeButtonContainer">
+        <div class="row">
+            <h1 class="center-align">
+                {{Days}}d : {{Hours}}h : {{Minutes}}m : {{Seconds}}s
+            </h1>
+        </div>
+        <div class="row">
+            <div class="center-align comingSoon">
+                <p>
+                    Coming Soon
+                    <span class="jumping-dots">
+                    <span class="dot-1">.</span>
+                    <span class="dot-2">.</span>
+                    <span class="dot-3">.</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="center-align">
+                <a class="waves-effect waves-light btn signUpButton" (click)="openModal1()">Sign up for updates</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions1">
+    <div class="modal-content">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a class="waves-effect waves-light btn-flat" (click)="closeModal1()">Close</a>
+        <a class="modal-action modal-close waves-effect waves-light btn-flat">Submit</a>
+    </div>
+</div>

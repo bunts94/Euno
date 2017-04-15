@@ -1,0 +1,18 @@
+<nav id="eunoNav">
+    <div class="nav-wrapper">
+        <a [routerLink]="['']" class="brand-logo" id="company-logo">Euno</a>
+
+        <a href="#!" materialize="sideNav" [materializeParams]="[{edge: 'left'}]" data-activates="mobile-demo" class="button-collapse">
+            <i class="material-icons">menu</i>
+        </a>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a [routerLink]="['About']">About</a></li>
+            <li><a [routerLink]="['Founders']">Founders</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a [routerLink]="['About']">About</a></li>
+            <li><a [routerLink]="['Founders']">Founders</a></li>
+        </ul>
+    </div>
+</nav>
