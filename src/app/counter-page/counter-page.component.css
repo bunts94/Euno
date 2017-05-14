@@ -1,78 +1,54 @@
-h1,
-h2,
-h4 {
-    color: white;
-}
-
 .signUpButton {
     font-size: xx-large;
     padding: 5px 50px 40px 50px;
-    background: #114357
+    background: #1d1d1d;
 }
 
 .signUpButton:hover {
-    background: #1d566d
-}
-
-.valign-wrapper {
-    height: 100vh;
+    background: #2c2a2a;
 }
 
 .timeButtonContainer {
     margin-bottom: 150px;
 }
 
-.jumping-dots span {
-    position: relative;
-    bottom: 0px;
-    -webkit-animation: jump 1500ms infinite;
-    animation: jump 2s infinite;
-}
-
-.jumping-dots .dot-1 {
-    -webkit-animation-delay: 200ms;
-    animation-delay: 200ms;
-}
-
-.jumping-dots .dot-2 {
-    -webkit-animation-delay: 400ms;
-    animation-delay: 400ms;
-}
-
-.jumping-dots .dot-3 {
-    -webkit-animation-delay: 600ms;
-    animation-delay: 600ms;
-}
-
-@-webkit-keyframes jump {
-    0% {
-        bottom: 0px;
-    }
-    20% {
-        bottom: 5px;
-    }
-    40% {
-        bottom: 0px;
-    }
-}
-
-@keyframes jump {
-    0% {
-        bottom: 0px;
-    }
-    20% {
-        bottom: 5px;
-    }
-    40% {
-        bottom: 0px;
-    }
-}
-
-.comingSoon {
-    color: white;
-    font-size: xx-large;
+.tilt {
+    -webkit-transform: rotate(-15deg);
+    display: inline-block;
 }
 
 p {
     margin: 0px;
+    font-size: small;
+}
+
+.submitButton {
+    background-color: black;
+}
+
+.submitButton:hover {
+    background-color: #2c2a2a;
+}
+
+.logo {
+    font-weight: 300;
+    font-size: 50px;
+}
+
+#description {
+    text-align: center;
+    font-size: large;
+}
+
+.socialMedia {
+    color: black;
+}
+
+.socialMedia:hover {
+    cursor: hand;
+    color: #2c2a2a;
+}
+
+.signup-modal {
+    /*background-image: url(../../images/LPJ.jpg);*/
 }

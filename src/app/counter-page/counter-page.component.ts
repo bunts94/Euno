@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Rx';
 
 export class CounterPageComponent implements OnInit {
 
-  private readonly relaseDate: Date = new Date('05/01/2017');
+  private readonly relaseDate: Date = new Date('06/01/2017');
 
   private readonly milliToDays = 24 * 60 * 60 * 1000;
   private readonly milliToHours = 60 * 60 * 1000;
@@ -22,7 +22,7 @@ export class CounterPageComponent implements OnInit {
   public Minutes: number;
   public Seconds: number;
 
-  public modalActions1 = new EventEmitter<string | MaterializeAction>();
+  public modalActions = new EventEmitter<string | MaterializeAction>();
 
   constructor() { }
 
@@ -30,6 +30,7 @@ export class CounterPageComponent implements OnInit {
   ngOnInit() {
     Observable.timer(0, 1000).map(t => {
       let curr: Date = new Date();
+
       let ticksTillRelease = new Date(this.relaseDate.getTime() - curr.getTime()).getTime();
 
       this.Days = Math.floor(ticksTillRelease / this.milliToDays);
@@ -46,12 +47,12 @@ export class CounterPageComponent implements OnInit {
     }).subscribe();
   }
 
-  openModal1() {
-    this.modalActions1.emit({ action: "modal", params: ['open'] });
+  openModal() {
+    this.modalActions.emit({ action: "modal", params: ['open'] });
   }
 
-  closeModal1() {
-    this.modalActions1.emit({ action: "modal", params: ['close'] });
+  closeModal() {
+    this.modalActions.emit({ action: "modal", params: ['close'] });
   }
 
 }

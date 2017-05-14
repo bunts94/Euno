@@ -1,5 +1,6 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { CounterPageComponent } from './counter-page/counter-page.component';
+
 declare var particlesJS: any;
 
 @Component({
@@ -7,10 +8,14 @@ declare var particlesJS: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   ngAfterViewInit() {
-    particlesJS.load('particles-js', './src/app/counter-page/particlesjs-config.json', function () {
+    particlesJS.load('particles-js', 'json/particlesjs-config.json', function () {
       console.log('callback - particles.js config loaded');
     });
   }
+
+  constructor() { }
+
+  ngOnInit() { }
 }
